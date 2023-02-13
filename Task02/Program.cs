@@ -1,4 +1,4 @@
-﻿// 
+﻿// Week
 
 Console.WriteLine("Enter the number of a day of a week(1-7)");
 int number_of_a_week = Convert.ToInt32(Console.ReadLine());
