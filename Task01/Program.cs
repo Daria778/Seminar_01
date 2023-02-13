@@ -1,4 +1,4 @@
-﻿// 
+﻿// numberB is(not) a square of numberA
 Console.WriteLine("Enter the numberA");
 int numberA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter the numberB");
