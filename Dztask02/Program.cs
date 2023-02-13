@@ -1,4 +1,4 @@
-﻿// 
+﻿// max or not?
 
 Console.WriteLine("Enter the numberA");
 int numberA = Convert.ToInt32(Console.ReadLine());
