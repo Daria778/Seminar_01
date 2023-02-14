@@ -1,4 +1,4 @@
-﻿// 0, 2, ... N
+﻿//2, ... N
 Console.WriteLine("Enter a number");
 int num = Convert.ToInt32(Console.ReadLine());
 int count = 2;
