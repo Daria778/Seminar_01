@@ -21,10 +21,6 @@ else if(number == 7) Console.WriteLine("Sunday");
     {
        return num == 6 || num == 7; 
     }
-
-
-
-
 }
 else
 {
