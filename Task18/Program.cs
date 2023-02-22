@@ -6,8 +6,11 @@ int q = Convert.ToInt32(Console.ReadLine());
 
 
 string xy = XY(q);
-Console.WriteLine($"coordinate range of points in a quarter {q} is {XY(q)}");
-
+string result = xy == "0" ? 
+               "You have entered the wrong number for quarter"
+               : $"range of possible coordinates of points in a quarter {q} is {xy}";
+               Console.WriteLine(result);
+           
 string XY(int q)
 {
 if(q == 1) return "x > 0, y > 0";
