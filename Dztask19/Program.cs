@@ -13,9 +13,13 @@ if (number >= 10000 && number <= 99999)
     {
         int firstDigit = num / 10000;
         int lastDigit = num % 10;
-        int firstDigit2 = num / 1000;
-        int lastDigit2 = firstDigit2 % 100;
-        return firstDigit == lastDigit && firstDigit2 == lastDigit2;
+        int firstDigit2 = num % 10000;
+        int lastDigit2 = firstDigit2 / 1000;
+        int firstDigit3 = num % 100;
+        int lastDigit3 = firstDigit3 / 10;
+
+        return firstDigit == lastDigit && lastDigit2 == lastDigit3;
+
 
     }
 }
