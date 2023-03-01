@@ -41,5 +41,7 @@ int[] ProductOfNumbers(int[] arr)
     {
         newArr[i] = arr[i] * arr[arr.Length - 1 - i];
     }
+    if(newArr.Length % 2 != 0)
+    newArr[newArr.Length - 1] = arr[size -1];
      return newArr;
 }
