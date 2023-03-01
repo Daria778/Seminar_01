@@ -11,7 +11,7 @@ int[] FillArray(int size, int min, int max)
     return arr;
 }
 
-int[] array = FillArray(12, 0, 210);
+int[] array = FillArray(123, 0, 210);
 Console.WriteLine("Your array:");
 PrintArray(array);
 Console.WriteLine();
