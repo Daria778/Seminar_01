@@ -49,11 +49,21 @@ double Min(double[] arr)
 return Math.Round(min, 1, MidpointRounding.ToZero);
 }
 
-double[] array = FillArray(4, -10, 100);
 
+
+double Dif(double[] arr)
+{
+    double d = 0;
+    double i = Max(arr);
+    double t = Min(arr);
+    d = i - t;
+return d;
+    
+}
+
+
+double[] array = FillArray(4, -10, 100);
 PrintArray(array);
 Console.WriteLine();
-Console.WriteLine(Max(array) - Min(array));
-
-
+Console.Write(Dif(array));
 
