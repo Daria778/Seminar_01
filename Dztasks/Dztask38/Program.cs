@@ -62,7 +62,7 @@ return d;
 }
 
 
-double[] array = FillArray(4, -10, 100);
+double[] array = FillArray(4, -100, 100);
 PrintArray(array);
 Console.WriteLine();
 Console.Write(Dif(array));
