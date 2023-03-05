@@ -1,4 +1,4 @@
-﻿// 
+﻿// treangle theory
 
 Console.WriteLine("Enter the number A");
 int numberA = Convert.ToInt32(Console.ReadLine());
