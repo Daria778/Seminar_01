@@ -18,15 +18,15 @@ string AB(int num)
 }
 
 // решение через int
-int FF(int num)
-{
-    int count = 1;
-    int result = 0;
-    while(num > 0)
-    {
-        result = result + num % 2 * count;
-        num = num / 2;
-        count *= 10;
-    }
-    return result;
-}
+// int FF(int num)
+// {
+//     int count = 1;
+//     int result = 0;
+//     while(num > 0)
+//     {
+//         result = result + num % 2 * count;
+//         num = num / 2;
+//         count *= 10;
+//     }
+//     return result;
+// }
