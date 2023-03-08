@@ -1,4 +1,4 @@
-﻿// 
+﻿// matrix
 
 
 double[,] FillArray(int rows, int columns, int min, int max)
