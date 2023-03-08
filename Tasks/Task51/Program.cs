@@ -29,16 +29,16 @@ int[,] FillArray(int rows, int columns, int min, int max)
 int Sum(int[,] arr)
 {
     int sum = 0;
-    int size = arr.GetLength(0);
-    if (size > arr.GetLength(1)) size = arr.GetLength(1);
-    for (int i = 0; i < size; i++)
+    //int size = arr.GetLength(0);
+    //if ( size < arr.GetLength(1)) size = arr.GetLength(1);
+    for (int i = 0; i < arr.GetLength(0) && i < arr.GetLength(1); i++)
     {
         sum += arr[i, i];
     }
     return sum;
 }
 
-int[,] array = FillArray(4, 3, 1, 10);
+int[,] array = FillArray(89, 8, 1, 10);
 PrintArray(array);
 Console.WriteLine();
 Console.WriteLine(Sum(array));
