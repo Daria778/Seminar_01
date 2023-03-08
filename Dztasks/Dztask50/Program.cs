@@ -1,6 +1,5 @@
 ﻿// i, j
 
-
 int[,] array = FillArray(4, 4, 1, 10);
 PrintArray(array);
 
