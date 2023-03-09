@@ -1,4 +1,4 @@
-﻿// 
+﻿// Average
 
 int[,] FillArray(int rows, int columns, int min, int max)
 {
@@ -20,7 +20,7 @@ void PrintArray(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-                Console.Write($"{arr[i, j],4} ");
+            Console.Write($"{arr[i, j],4} ");
         }
         Console.WriteLine();
     }
@@ -29,32 +29,36 @@ void PrintArray(int[,] arr)
 double[] Average(int[,] arr)
 {
     double average = 0;
-    int sum = 0;
+    double sum = 0;
     double[] newarr = new double[arr.GetLength(1)];
     for (int j = 0; j < arr.GetLength(1); j++)
     {
         for (int i = 0; i < arr.GetLength(0); i++)
         {
-            sum += arr[i, j];
-            average = sum / arr.GetLength(1);
-            for (int n = 0; n < newarr.Length; n++)
-            {
-                newarr[n] = Math.Round(average, 1, MidpointRounding.ToZero);
-            }
+            sum = sum + arr[i, j];
         }
+        average = sum / arr.GetLength(1);
+       
+         newarr[j] = Math.Round(average, 1, MidpointRounding.ToZero);
+        sum = 0;
     }
     return newarr;
 }
 
 void PrintNewArray(double[] arr)
 {
+    Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-            Console.Write($"{arr[i],4} ");
+        if (i < arr.Length - 1)
+            Console.Write(arr[i] + ";  ");
+        else
+            Console.Write(arr[i]);
     }
-    Console.WriteLine();
+    Console.Write("]");
 }
 
 int[,] array = FillArray(4, 4, 1, 10);
 PrintArray(array);
+Console.WriteLine();
 PrintNewArray(Average(array));
