@@ -9,7 +9,9 @@ int numi = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter j");
 int numj = Convert.ToInt32(Console.ReadLine());
 
-if(numi < array.GetLength(0) && numj < array.GetLength(1)) Console.WriteLine(array[numi, numj]);
+
+if(numi > 0 && numj > 0 
+   && numi < array.GetLength(0) && numj < array.GetLength(1)) Console.WriteLine(array[numi, numj]);
 else Console.WriteLine("there is no such element in the array");
 
 int[,] FillArray(int rows, int columns, int min, int max)
