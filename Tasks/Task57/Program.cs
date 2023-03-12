@@ -70,6 +70,7 @@ void SumElem(int[] newarr)
             count = 1;
         }
     }
+    Console.Write($"number {curentNum} meets {count} times");
 }
 
 
