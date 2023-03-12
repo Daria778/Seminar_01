@@ -23,15 +23,16 @@ void PrintArray(int[,] arr)
             Console.Write($"{arr[i, j],4} ");
         }
         Console.WriteLine();
+        Console.WriteLine();
     }
 }
- 
+
 
 void ReplaceColumnsRows(int[,] arr)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0) - 1; i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = i + 1; j < arr.GetLength(1); j++)
         {
             int replace = arr[i, j];
             arr[i, j] = arr[j, i];
@@ -40,11 +41,11 @@ void ReplaceColumnsRows(int[,] arr)
     }
 }
 
-int[,] array = FillArray(5, 5, 1, 10);
+int[,] array = FillArray(3, 3, 1, 10);
 PrintArray(array);
 Console.WriteLine();
-int rows = arr.GetLength(0);
- int columns = arr.GetLength(1);
+int rows = array.GetLength(0);
+int columns = array.GetLength(1);
 ReplaceColumnsRows(array);
-if(rows != columns) Console.WriteLine($"input error");
+if (rows != columns) Console.WriteLine($"input error");
 PrintArray(array);
