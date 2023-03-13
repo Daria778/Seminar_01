@@ -27,28 +27,29 @@ void PrintArray(int[,] arr)
     }
 }
 
-void Sort(int[,] arr)
-{
-
-    for (int i = 0; i < arr.GetLength(0); i++)
+int[,] Matrix(int[,] arr, int[,] newarr)
+{   
+    int[,] matrix = new int[arr.GetLength(0), newarr.GetLength(1)];
+    
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < arr.GetLength(1) - 1; j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            int max = j;
-            for (int n = j + 1; n < arr.GetLength(1); n++)
+            for (int k = 0; k < matrix.GetLength(1); k++)
             {
-                if (arr[i, n] > arr[i, max])  max = n;
-                
-                int temp = arr[i, j];
-                arr[i, j] = arr[i, max];
-                arr[i, max] = temp;
+                matrix[i, j] = matrix[i, j] + arr[i, k] * newarr[k, j];
+        
             }
         }
     }
-
+    return matrix;
 }
-    int[,] array = FillArray(3, 4, 1, 10);
-    PrintArray(array);
-    Console.WriteLine();
-    Sort(array);
-    PrintArray(array);
+
+int[,] array = FillArray(2, 2, 1, 10);
+int[,] newArray = FillArray(2, 2, 1, 10);
+PrintArray(array);
+Console.WriteLine();
+PrintArray(newArray);
+Console.WriteLine();
+int[,] matrix = Matrix(array, newArray);
+PrintArray(matrix);
