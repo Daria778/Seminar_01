@@ -27,28 +27,46 @@ void PrintArray(int[,] arr)
     }
 }
 
-int Sum(int[,] arr)
-{
-    int minSum = 0;
+int[,] Sum(int[,] arr)
+{ 
+    int[,] arrsum = new int[arr.GetLength(0), 1];
     int sum = 0;
-    int count = 1;
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
             sum = sum + arr[i, j];
         }
-        if (minSum > sum)
-        {
-            minSum = sum;
-            count++;
-        }
+
+        arrsum[i, 0] = sum;
+
+
         sum = 0;
     }
-    return count;
+    return arrsum;
 }
 
-int[,] array = FillArray(3, 4, 1, 10);
+int MinSum(int[,] arr)
+{
+    int min = arr[0, 0];
+    int minI = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            if(arr[i, j] < min)
+            {
+            min = arr[i, j];
+            minI = i;
+            }
+        }
+    }
+    return minI + 1;
+}
+
+int[,] array = FillArray(3, 3, 1, 10);
 PrintArray(array);
 Console.WriteLine();
-Console.WriteLine(Sum(array));
+int[,] sumArr = Sum(array);
+PrintArray(sumArr);
+Console.WriteLine($"{MinSum(sumArr)} строка");

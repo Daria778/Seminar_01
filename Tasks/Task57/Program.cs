@@ -30,7 +30,7 @@ void PrintArray(int[,] arr)
 int[] Newarray(int[,] arr)
 {
     int n = 0;
-    int[] newarr = new int[arr.Length];
+    int[] newarr = new int[arr.Len];
     for (int i = 0; i < arr.GetLength(0); i++)
     {
        for (int j = 0; j < arr.GetLength(1); j++)
