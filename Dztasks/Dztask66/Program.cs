@@ -9,6 +9,8 @@ int numM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter num N");
 int numN = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
+if(numM <= 0 && numN <= 0) Console.WriteLine("You have entered the wrong numbers");
+else
 Console.WriteLine($"{SumNumbers(numM, numN)}");
 
 int SumNumbers(int num1, int num2)
