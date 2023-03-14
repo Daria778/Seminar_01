@@ -8,15 +8,8 @@ int numM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter num N");
 int numN = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
-Console.WriteLine(Ackerman(numM, numN));
-
-// функция ack(n, m)
-//    если n = 0
-//      вернуть m + 1
-//    иначе, если m = 0
-//      вернуть ack (n - 1, 1)
-//    еще
-//      вернуть ack(n - 1, ack (n, m - 1))
+if(numM >= 0 && numN >= 0) Console.WriteLine(Ackerman(numM, numN));
+else Console.WriteLine("You have entered the wrong numbers");
 
 int Ackerman(int n, int m)
 {
