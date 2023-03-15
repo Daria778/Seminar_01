@@ -15,7 +15,7 @@ Console.WriteLine($"{SumNumbers(numM, numN)}");
 
 int SumNumbers(int num1, int num2)
 {
-    if(num1 == num2) return num1 + num2;
+    if(num1 == num2) return num1;
     else if(num2 > num1) return num1 + SumNumbers(num2, num1 + 1);
     else return num2 + SumNumbers(num1, num2 + 1);
 }
